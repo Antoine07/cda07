@@ -498,6 +498,8 @@ const o2 = {
 
 console.log(o2.f2()) ; // this de o2
 
+---- NOTION HORS PROGRAMME
+
 const o3 = o1.f1;
 
 console.log(o3()) ; // undefined car on n'appelle la fonction f1 explicitement
@@ -516,6 +518,8 @@ Pour corriger ce problème il faut écrire :
 ```js
 setTimeout(() => o1.f1() , 1000); // ici setTimeout appel la fonction f1.
 ```
+
+---- NOTION HORS PROGRAMME
 
 ## Fonction & fonction fléchée
 
@@ -578,6 +582,8 @@ const myFunc = function(){
 }
 ```
 
+---- NOTION HORS PROGRAMME
+
 ### Arguments d'une fonction
 
 Vous n'êtes pas obligé de renseigner le nombre d'argument d'une fonction JS. La fonction possède en interne une propriété (objet) arguments qui récupère les paramètres de la fonction, attention arguments n'est pas un tableau :
@@ -613,6 +619,8 @@ console.log( sum(1,2,3,5) ); // 11
 
 ```
 
+---- NOTION HORS PROGRAMM
+
 ### Les fonctions fléchées
 
 Les fonctions fléchées (arrow function) permettent d'avoir une syntaxe plus courte pour définir facilement des fonctions de rappel comme map, filter, reducer ...
@@ -636,6 +644,21 @@ const sum = (x, y) => x + y ;
 const sum2 = (x, y) => {
   return x + y;
 };
+```
+
+### Exercice arrow function
+
+1. Mettre les nombres strictement supérieur à 3 au carrés dans le tableau suivant, retournez un nouveau tableau.
+
+2. Mettez les nombres impairs à la puissance 3, retournez les résultats dans un nouveau tableau.
+
+3.  Mettez les nombres multiple de 5 à la puissance 3, retournez les résultats dans un nouveau tableau.
+
+Indications : pour les questions 2 et 3 utilisez un modulo.
+
+```js
+const numbers = [1, 2, 0, 45, 3, 7, 19, 100];
+
 ```
 
 Dans le cas ou vous souhaiteriez retourner un unique littéral, dans des accolades donc ..., utilisez la syntaxe suivante parenthèse :
