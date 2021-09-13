@@ -450,12 +450,12 @@ Les prix HT seront donnés dans un tableau :
 ```js
 const pricesHT = [100, 200, 55];
 
-console.log(sumTTC(...priceHT));
-console.log(sumTTC(...priceHT, .3));
+console.log(sumTTC(...pricesHT));
+console.log(sumTTC(...pricesHT, .3));
 
 // vérifiez le type des variables
-const badPriceHT = [100.50, "hello", 55.7];
-console.log(sumTTC(...badPriceHT, .3));
+const badPricesHT = [100.50, "hello", 55.7];
+console.log(sumTTC(...badPricesHT, .3));
 ```
 
 ### littéral pour définir des paramètres
