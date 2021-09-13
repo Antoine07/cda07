@@ -42,7 +42,7 @@ const students = [
   { s: 3, note: 13 },
 ];
 
-const stIncrease = students.map((student) => {
+students.map((student) => {
   student.note = student.note * 1.05; // modification par référence dans les student (objet)
 
   return student;
@@ -50,3 +50,7 @@ const stIncrease = students.map((student) => {
 
 // Attention passage par référence le tableau students a été modifié
 console.log(students);
+
+// Faire une copie de chaque objet pour le séparer de la mémoire 
+
+// Maintenant on décide de faire une augmentation de 10% mais on souhaite séparer de la mémoire students et le nouveau résultat

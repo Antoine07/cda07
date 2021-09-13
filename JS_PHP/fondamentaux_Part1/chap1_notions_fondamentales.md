@@ -661,6 +661,14 @@ const numbers = [1, 2, 0, 45, 3, 7, 19, 100];
 
 ```
 
+## Exercice copy d'objet
+
+Sachant que vous pouvez faire une copie distinct d'un objet simple d'un objet en JS à l'aide du spread operator. Faites la copie de l'objet suivant dans votre script :
+
+```js
+let student = { name : "Alan", age : 45 } ;
+```
+
 Dans le cas ou vous souhaiteriez retourner un unique littéral, dans des accolades donc ..., utilisez la syntaxe suivante parenthèse :
 
 ```js
