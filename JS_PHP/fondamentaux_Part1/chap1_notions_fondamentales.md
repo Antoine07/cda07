@@ -972,7 +972,6 @@ const numbers = [{a:10}, {a:18},{a:13},{a:9},{a:12},{a:11},{a:18},{a:9},{a:15},{
 
 ```js
 const couples = [[11,12], [13,15],[10,17], [17,19], [1,111], [103,105]];
-
 ```
 
 ### Exercice max
@@ -1001,7 +1000,7 @@ const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 ### Exercice fonction map
 
-Utilisez la fonction map pour calculer le prix TTC des téléphones suivants en utilisant une fonction fléchée :
+Utilisez, la fonction map pour calculer le prix TTC des téléphones suivants en utilisant une fonction fléchée :
 
 ```js
 const phones = [
