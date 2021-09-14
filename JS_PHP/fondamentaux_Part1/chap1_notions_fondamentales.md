@@ -928,6 +928,14 @@ const students = [
 ]
 ```
 
+### Exercice Algo
+
+En vous aidant des fonctions que l'on vient de voir sur les tableaux compter le nombre de fois que l'on a 10 dans le tableau de occurences.
+
+```js
+const occurences = [11, 10, 5, 1, 2, 10, 13, 10, 9, 10, 2.2];
+
+```
 
 - reduce. Applique un accumulateur de la droite vers la gauche et traite chaque élément de la liste.
 
