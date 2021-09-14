@@ -910,7 +910,7 @@ numbers.filter(number => number > 4);
 
 1. Dans le tableau notes récupérer les nombres qui sont plus petit que 5 strictement.
 
-2. Dans le tableau student, récupérez les étudiants ayant eu un moyenne supérieur strictement à 10.
+2. Dans le tableau student, récupérez les étudiants ayant eu une moyenne supérieur strictement à 10.
 
 ```js
 const notes = [11, 10, 5, 1, 2, 1, 13, 10, 9, 1.2, 2.2];
@@ -937,9 +937,7 @@ const occurences = [11, 10, 5, 1, 2, 10, 13, 10, 9, 10, 2.2];
 
 ```
 
-2. Calculez la moyenne et créez deux tableaux respectivement avec les valeurs en-dessous et au-dessus de cette valeur.
-
-- reduce. Applique un accumulateur de la droite vers la gauche et traite chaque élément de la liste.
+2. Calculez la moyenne et créez deux tableaux respectivement avec les valeurs en-dessous et au-dessus de cette la valeur moyenne
 
 Vous pouvez passer une valeur par défaut à la fonction reduce, deuxième paramètre. Cette valeur est facultative et par défaut vaut 0.
 
@@ -947,10 +945,34 @@ Vous pouvez passer une valeur par défaut à la fonction reduce, deuxième param
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 // première paramètre fonction fléchée, deuxième paramètre val init de acc
 const total = numbers.reduce((acc, curr) => curr + acc, 0);
+
+/*
+//(acc, curr) => curr + acc
+0, 1 => 1 + 0
+1, 2 => 2 + 1
+3,3 => 3 + 3
+...
+*/
+
 console.log(total); // affiche 55
 
 numbers.reduce((acc, curr) => curr + acc, 100);
 // 155
+```
+
+### Exercice sum avec reduce
+
+1. Faite la somme des valeurs suivantes
+
+```js
+const numbers = [{a:10}, {a:18},{a:13},{a:9},{a:12},{a:11},{a:18},{a:9},{a:15},{a:14},{a:16}];
+```
+
+2. Concaténer les tableaux de dimensions 2 suivants dans un tableau de dimension 1
+
+```js
+const couples = [[11,12], [13,15],[10,17], [17,19], [1,111], [103,105]];
+
 ```
 
 ### Exercice max
