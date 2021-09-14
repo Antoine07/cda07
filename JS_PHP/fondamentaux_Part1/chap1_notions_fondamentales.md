@@ -663,11 +663,14 @@ const numbers = [1, 2, 0, 45, 3, 7, 19, 100];
 
 ## Exercice copy d'objet
 
-Sachant que vous pouvez faire une copie distinct d'un objet simple d'un objet en JS à l'aide du spread operator. Faites la copie de l'objet suivant dans votre script :
+1. Sachant que vous pouvez faire une copie distinct d'un objet simple en JS à l'aide du spread operator. Faites la copie de l'objet suivant dans votre script.
+
+2. Si vous avez le temps créez une fonction constructeur ou un littéral paramètrable qui génère n objets distinctes student rangés dans un tableau.
 
 ```js
 let student = { name : "Alan", age : 45 } ;
 ```
+
 
 Dans le cas ou vous souhaiteriez retourner un unique littéral, dans des accolades donc ..., utilisez la syntaxe suivante parenthèse :
 
@@ -678,29 +681,41 @@ console.log(model(1,2)); // retournera { x : 1, y : 2 }
 
 // Une syntaxe plus longue mais équivalente
 const model2 = (x, y) => { 
-    return { x : x, y : y }
+    const res = { x : x, y : y };
+
+    return res;
 }
 ```
 
-Contrairement aux fonctions classiques, les fonctions fléchées ne re-définissent pas de this. Si vous vous référez dans une fonction fléchée au mot clé this, la fonction fléchée **récupérera le this du contexte** de définition de la fonction flèchée :
+Contrairement aux fonctions classiques, les fonctions fléchées ne re-définissent pas de this, elles ne peuvent pas faire de new comme dans les fonctions constructeurs. Si vous vous référez dans une fonction fléchée au mot clé this, la fonction fléchée **récupérera le this du contexte** de définition de la fonction flèchée (contexte dans lequel vous avez écris votre fonction).
 
 ```js
+// "use strict";
+
 const School = {
     name: "Alan",
-    sayHello() {
-        // récupérer le this du context
-        const that = this;
+    // sayHello est une méthode de l'objet School donc elle a accès à l'objet School this
+    sayHello : function() {
+        console.log("say Hello", this.name)
+        // récupérer le this du context de l'objet School et permet de le passer à la fonction getName
+        const that = this; // this ==> l'objet School
+
+        // les fonctions déclarées sont compilées en premier en JS donc pas de contexte, pas new devant la fonction
+        // elles récupèrent le contexte général Object ou window ou undefined en mode strict.
         function getName() {
-            console.log(that.name); // Alan
-            console.log(this.name); // undefined
+            // on passe le contexte à la fonction pour qu'elle ne le perde pas
+            console.log("that", that.name); // Alan
+            console.log(this); // ici le this correspond à l'objet Object de Node.js
+            console.log("this", this.name); // undefined
         }
         getName();
     },
 
-    sayHelloArrowFunc(){
+    sayHelloArrowFunc: function(){
         // La fonction fléchée récupère le context de l'objet courant School
         let func = () => {
-            console.log(this.name); // Alan
+            // le this du School
+            console.log("this avec fonction fleche", this.name, this); // Alan
         }
         func();
     }
@@ -720,12 +735,14 @@ function User(name){
   console.log(this.name);
 }
 
-const u1 = new user("Alan");
-const u2 = new user("Alan");
+// création de deux instances de User
+const u1 = new User("Alan");
+const u2 = new User("Alan");
 
 // Le code qui suit produira une erreur 
 // pas de constructeur dans ce cas
-/*const userArrow = name => {
+/*
+const userArrow = name => {
   this.name = name;
 
   console.log(this.name);
@@ -784,6 +801,8 @@ const log = {
 }
 setTimeout(log.save, 500);
 ```
+
+-- HORS PROGRAMME
 
 ### prototype d'une fonction 
 
@@ -850,6 +869,8 @@ Quand JS appelle cette méthode il ne la trouvera pas dans l'instance de User ma
 
 JS possède depuis **ES6** un mot clé class pour définir une classe, nous verrons qu'en fait ce mot clé permet de définir, comme dans l'exemple précédent, un constructeur.
 
+-- HORS PROGRAMME
+
 ## Fonctions fléchées et fonction de rappel dans les tableaux
 
 Vous pouvez utiliser une fonction fléchée sur des collections en utilisant des fonctions comme map, filter ou reduce par exemple :
@@ -876,7 +897,7 @@ const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 2**3 // 8
 ```
 
-- filter, il permet de filtrer des données dans un tableau en fonction d'un critère.
+- filter, il permet de filtrer des données dans un tableau en fonction d'un critère. filter renvoi un tableau qui aura une dimension <= à la dimension du tableau filtré.
 
 ```js
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -884,6 +905,29 @@ const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 numbers.filter(number => number > 4);
 // [5, 6, 7, 8, 9, 10]
 ```
+
+### Exercice filter
+
+1. Dans le tableau notes récupérer les nombres qui sont plus petit que 5 strictement.
+
+2. Dans le tableau student, récupérez les étudiants ayant eu un moyenne supérieur strictement à 10.
+
+```js
+const notes = [11, 10, 5, 1, 2, 1, 13, 10, 9, 1.2, 2."];
+const students = [
+  {name : "Alan", avg : 10.5},
+  {name : "Sophie", avg : 9.5},
+  {name : "Bernard", avg : 10},
+  {name : "Alice", avg : 12},
+  {name : "Lucie", avg : 14},
+  {name : "Michel", avg : 19},
+  {name : "Antoine", avg : 10},
+  {name : "Phil", avg : 11},
+  {name : "Caroline", avg : 7},
+  {name : "Paul", avg : 8},
+]
+```
+
 
 - reduce. Applique un accumulateur de la droite vers la gauche et traite chaque élément de la liste.
 
