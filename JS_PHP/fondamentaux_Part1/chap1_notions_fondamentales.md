@@ -979,6 +979,10 @@ const couples = [[11,12], [13,15],[10,17], [17,19], [1,111], [103,105]];
 
 Reprenez l'objet numbers (array) de numériques et utilisez la méthode reduce pour calculer le max.
 
+### Exercice min & max
+
+Renvoyez le min et le max à l'aide de reduce sur le tableau numbers ci-dessus.
+
 ### Exercice puissance 3 nombres pairs
 
 Soit la liste numbers d'entiers, filtrez les nombres pairs et les élever à la puissance 3.
