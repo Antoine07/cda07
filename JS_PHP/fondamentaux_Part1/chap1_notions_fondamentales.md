@@ -1030,6 +1030,47 @@ const CounterV1 = {
 CounterV1.counter();
 ```
 
+## Exercices de synthèse
+
+1. Soit le littéral suivant calculer la moyenne de chaque étudiant, véirifiez avant que l'étudiant à bien des notes. 
+
+2. Changez votre approche on aimerait retourner un objet newStudent qui serait une copie de l'objet student.
+
+```js
+const students = [
+  // 1 niveau de référence c'est le tableau
+  {
+    // 2 niveau de référence c'est les littéraux
+    name: "Alan",
+    address: [
+      // 3 niveau de ref
+      {
+        // 4 niveau de ref
+        street: "Chateau",
+      },
+      { street: "Cholvy" },
+    ],
+    family: {
+      mother: "Isa",
+      father: "Philippe",
+      sister: "Sylvie",
+    },
+    age: 35,
+    notes: [11, 12, 15], // facultatif
+  },
+  {
+    name: "Bernard",
+    address: [{ street: "La Place" }, { street: "Lewis Carrol" }],
+    family: {
+      mother: "Particia",
+      father: "Cécile",
+      sister: "Annie",
+    },
+    age: 55,
+  },
+];
+```
+
 ## Affectation par décomposition
 
 Vous pouvez affecter par décomposition des variables pré-définies comme suit :
