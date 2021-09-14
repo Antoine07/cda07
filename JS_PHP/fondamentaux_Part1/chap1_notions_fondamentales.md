@@ -913,7 +913,7 @@ numbers.filter(number => number > 4);
 2. Dans le tableau student, récupérez les étudiants ayant eu un moyenne supérieur strictement à 10.
 
 ```js
-const notes = [11, 10, 5, 1, 2, 1, 13, 10, 9, 1.2, 2."];
+const notes = [11, 10, 5, 1, 2, 1, 13, 10, 9, 1.2, 2.2];
 const students = [
   {name : "Alan", avg : 10.5},
   {name : "Sophie", avg : 9.5},
