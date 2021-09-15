@@ -1,15 +1,25 @@
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 10];
 
-const sumEven = numbers.reduce((acc, curr) => {
-  if (curr % 2) acc += curr;
+const sumNumbEven = numbers.reduce((acc, curr) => {
+    if( curr % 2 != 0){
 
-  return acc;
+        return curr + acc ; // acc
+    }
+
+    return acc; // garder ce que tu avais déjà calculé
 }, 0);
 
-console.log(sumEven);
+console.log(sumNumbEven);
 
-// de manière plus synthétique
+/*
 
-console.log(numbers.reduce((acc, curr) => (curr % 2 && acc + curr) || acc));
+// 1
+acc = 0
+ 1 + 0
 
-const numbersBis = [2, 4, 6, 10];
+// 2
+1
+
+// 3
+3 + 1 = 4 // acc
+*/
