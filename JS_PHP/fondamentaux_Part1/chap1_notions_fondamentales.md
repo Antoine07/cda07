@@ -974,11 +974,11 @@ const numbers = [{a:10}, {a:18},{a:13},{a:9},{a:12},{a:11},{a:18},{a:9},{a:15},{
 const couples = [[11,12], [13,15],[10,17], [17,19], [1,111], [103,105]];
 ```
 
-### Exercice max
+### 12 Exercice max
 
 Reprenez l'objet numbers (array) de numériques et utilisez la méthode reduce pour calculer le max.
 
-### Exercice min & max
+### 12 Exercice min & max
 
 Renvoyez le min et le max à l'aide de reduce sur le tableau numbers ci-dessus.
 
@@ -990,7 +990,7 @@ Soit la liste numbers d'entiers, filtrez les nombres pairs et les élever à la 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 ```
 
-### Exercice reduce sum impair
+### 13 Exercice reduce sum impair
 
 Faites la somme des nombres impairs en utilisant la fonction reduce des valeurs suivantes :
 
@@ -998,7 +998,7 @@ Faites la somme des nombres impairs en utilisant la fonction reduce des valeurs 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 ```
 
-### Exercice fonction map
+### 14 Exercice fonction map
 
 Utilisez, la fonction map pour calculer le prix TTC des téléphones suivants en utilisant une fonction fléchée :
 
@@ -1010,7 +1010,7 @@ const phones = [
 ];
 ```
 
-### Exercice counter arrow
+### 15 Exercice counter arrow
 
 Corrigez le code (ES5) suivant afin que le compteur s'incrémente correctement.
 
@@ -1030,7 +1030,7 @@ const CounterV1 = {
 CounterV1.counter();
 ```
 
-## Exercices de synthèse
+## 16 Exercices de synthèse
 
 1. Soit le littéral suivant calculer la moyenne de chaque étudiant, véirifiez avant que l'étudiant à bien des notes. 
 
@@ -1071,7 +1071,7 @@ const students = [
 ];
 ```
 
-## Affectation par décomposition
+## Affectation par décomposition  
 
 Vous pouvez affecter par décomposition des variables pré-définies comme suit :
 
@@ -1148,7 +1148,7 @@ infoStudent(student);
 const infoStudent_bis = ({ note, mention }) => "info : " + mention + "note : " + note;
 ```
 
-### Exercice permutations
+### 17 Exercice permutations
 
 - Permutez les valeurs a et b suivantes :
 
@@ -1166,7 +1166,7 @@ let a = 1, b = 2;
 let a = 1, b = 2, c = 4;
 ```
 
-### Exercice assigner par décomposition
+### 18 Exercice assigner par décomposition
 
 1. Calculez la moyenne des notes de l'étudiant. Modifiez le littéral.
 
@@ -1185,7 +1185,7 @@ let student = {
 console.log(name, notes, average);
 ```
 
-### Exercice iterate destructuring
+### 19 Exercice iterate destructuring
 
 Soient les données suivantes affichez le nom et le nom de la soeur de chaque étudiant en utilisant une boucle for of :
 
@@ -1263,7 +1263,7 @@ const newState = { ...state, email: "sophie@sophie.fr" };
 // {name: "", age: 25, email: "sophie@sophie.fr"}
 ```
 
-## Exercice push value
+## 20 Exercice push value
 
 Soient les données suivantes. Créez un tableau strNumbers et pushez chacune des valeurs de ce tableau sans créer un tableau de tableaux. Rappelez-vous qu'une constante bloque uniquement l'assignation, mais si la constante est un objet vous pouvez toujours le modifier.
 
@@ -1288,7 +1288,7 @@ let name = "email";
 const newState = { ...state, [name]: "bernard@bernard.fr" };
 ```
 
-## Exercice ordre et longueur de mots
+## 21 Exercice ordre et longueur de mots
 
 Utilisez la fonction sort de JS. Voir la documentation de cette fonction.
 
