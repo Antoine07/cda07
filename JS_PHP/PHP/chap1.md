@@ -68,7 +68,7 @@ $exp16 = (5.5*2 == 11 || 1/2 != .5) && (3%2 != 0);
 
 ## 02 Exercice
 
-écrire un script pour déterminer le maximun de trois variables distinctes :
+Ecrire un script pour déterminer le maximun de trois variables distinctes :
 
 ```php
 $a = 10;
@@ -78,4 +78,14 @@ $c = 7;
 
 ## 03
 
-écrire un script permettant de déterminer la valeur maximal d'un tableau d'entiers
+Ecrire un script permettant de déterminer la valeur maximal d'un tableau d'entiers
+
+## 04
+
+Soit le tableau data ci-dessous, comptez dans un tableau results le nombre d'occurences de chacun des entiers du tableau data.
+Note: la clé du tableau results sera la valeur du tableau data et la valeur son nombre d'occurences
+ 
+```php
+$results = [];
+$data = [1, 1, 2, 3, 4, 8, 8, 5, 6, 6, 9, 9, 10, 11, 12, 14, 48, 48, 51, 51, 1, 1, 1, 51, 3, 3, 3, 51, 51, 51, 51, 51, 0];
+```
