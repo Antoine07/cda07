@@ -75,3 +75,7 @@ $a = 10;
 $b = 5;
 $c = 7;
 ```
+
+## 03
+
+écrire un script permettant de déterminer la valeur maximal d'un tableau d'entiers
