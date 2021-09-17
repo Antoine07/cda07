@@ -1,5 +1,7 @@
 # Projet Panier
 
+Vous pouvez pour ce projet aborder si vous le souhaiter Ds\Collection pour gérer vos données dans ce TP.
+
 Vous développez un projet de panier et affichez dans une page principale la liste des produits commandés.
 
 - listes des classes PHP utiles pour le projet
