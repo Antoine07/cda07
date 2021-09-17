@@ -1,6 +1,6 @@
 # Projet Panier
 
-Vous pouvez pour ce projet aborder si vous le souhaiter Ds\Collection pour gérer vos données dans ce TP.
+Vous pouvez pour ce projet utiliser si vous le souhaiter Ds\Collection pour gérer vos données.
 
 Vous développez un projet de panier et affichez dans une page principale la liste des produits commandés.
 
@@ -11,7 +11,7 @@ Vous développez un projet de panier et affichez dans une page principale la lis
     - Une classe StorageBike qui permettra de récupérer les produits stockés dans un fichier.
 
 Voici le diagramme UML de la classe Product, le type sera fixé par défaut dans la classe Product et surchargé dans la classe
-Bike.
+Bike. Vous pouvez surcharger des attributs public ou protected mais pas private.
 
 ```
 **************
@@ -69,7 +69,7 @@ __construct($fileName = 'bikes.csv')
 
 ```
 
-Pour terminer voici les données du fichier csv
+Pour terminer voici les données du fichier csv, voir fopen et fgetcsv sur le site php.net utilisez des exemples du site.
 
 ```
 "Brompton S",1300.5,red
