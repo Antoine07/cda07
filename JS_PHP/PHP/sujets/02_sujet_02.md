@@ -14,24 +14,36 @@ Notez que la cible des formulaires sera le fichier index.php
 ```
         Calculatrice
         
-Formulaire 1                                              Formulaire 2 
+Formulaire 1                                              
 
-Nombre 1 :[  ]                                            Calculer la moyenne:                                                []  
-Nombre 2 :[  ]                                            Saisir les nombres dans le champs suivant en les séparants par 
-                                                          une virgule:
-                                                          [           ]
-Opérateur: [ addition, multiplication, soustraction ]     [Calculer]
+Nombre 1 :[  ]                                            
+Nombre 2 :[  ]                                            
+                                                          
+Opérateur: [ addition, multiplication, soustraction ]     
 
 [Calculer]
 
 ```
 
-Une fois que l'on a envoyé le formulaire, cible index.php, vous afficherez le résultat dans la même page show.php, faites une condition sur 
-une variable result = null pour afficher les formulaires ou le résultat lui-même. Un bouton pour revenir à la page présentant
-les deux formulaires de calcul sera également présent dans cette page, voyez le wireframe suivant:
+Une fois que l'on a envoyé le formulaire, cible index.php, vous afficherez le résultat dans la même page show.php, faites une condition sur une variable result = null pour afficher le formulaire ou le résultat lui-même. 
+
+Un bouton permettra de revenir sur la page affichant le formulaire :
 
 ```
 résultat: 10
 [revenir aux formulaires]
 
+```
+
+## Partie faculative
+
+Créez un deuxième formulaire pour effectuer le calcul de la moyenne
+
+```text
+Formulaire 2 
+
+Calculer la moyenne   
+Saisir les nombres dans le champs suivant en les séparants par une virgule:
+[12, 15, 18]
+[Calculer]
 ```
